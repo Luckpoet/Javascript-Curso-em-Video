@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pega Gringo</title>
+</head>
+<body>
+    <h1>Detectador de Gringo</h1>
+    <p>Onde você nasceu?</p>
+    Eu nasci no(a): <input type="text" id="pais">
+    <input type="button" value="Enviar" onclick="processar()">
+    <div id="texto"></div>
+
+    <script>
+        function processar()
+        {
+            var pais = document.getElementById("pais").value;
+            var texto = document.getElementById("texto");
+
+            if (pais == 'Brasil') {
+                texto.innerHTML = `<p>Você é <strong>Brasileiro</strong>!</p>`;
+            } else {
+                texto.innerHTML = `<p>Você é <strong>Gringo</strong>!</p>`
+            }
+        }
+    </script>
+</body>
+</html>
